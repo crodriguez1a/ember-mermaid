@@ -1,0 +1,79 @@
+
+<h2 class="subtitle is-3">Configuration</h2>
+
+<hr>
+<h2 class="subtitle is-4">Overall</h2>
+<ul>
+  <li><strong>cloneCssStyles</strong> - This options controls whether or not the css rules should be copied into the generated svg</li>
+  <li><strong>arrowMarkerAbsolute</strong> - This options controls whether or arrow markers in html code will be absolute pats or an anchor, #. This matters if you are using base tag settings.</li>
+</ul>
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart cloneCssStyles=true arrowMarkerAbsolute=true&#125;&#125;
+  &#123;&#123;!chart&#125;&#125;
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}
+
+<hr>
+<h2 class="subtitle is-4">Gantt</h2>
+
+<ul>
+  <li><strong>titleTopMargin</strong> - margin top for the text over the gantt diagram</li>
+  <li><strong>barHeight</strong> - the height of the bars in the graph</li>
+  <li><strong>barGap</strong> - the margin between the different activities in the gantt diagram</li>
+  <li><strong>topPadding</strong> - margin between title and gantt diagram and between axis and gantt diagram.</li>
+  <li><strong>sidePadding</strong> - the space allocated for the section name to the left of the activities.</li>
+  <li><strong>gridLineStartPadding</strong>  - Vertical starting position of the grid lines</li>
+  <li><strong>fontSize</strong> - font size ...</li>
+  <li><strong>fontFamily</strong> - font family ...</li>
+  <li><strong>numberSectionStyles</strong> - the number of alternating section styles</li>
+</ul>
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart gantt=(hash barHeight=30)&#125;&#125;
+  &#123;&#123;!gantt&#125;&#125;
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}
+
+<hr>
+<h2 class="subtitle is-4">Sequence Diagram</h2>
+
+<ul>
+  <li><strong>diagramMarginX</strong> - margin to the right and left of the sequence diagram</li>
+  <li><strong>diagramMarginY</strong>  - margin to the over and under the sequence diagram</li>
+  <li><strong>actorMargin</strong>  - Margin between actors</li>
+  <li><strong>width</strong>  - Width of actor boxes</li>
+  <li><strong>height</strong>  - Height of actor boxes</li>
+  <li><strong>boxMargin</strong>  - Margin around loop boxes</li>
+  <li><strong>boxTextMargin</strong>  - margin around the text in loop/alt/opt boxes</li>
+  <li><strong>noteMargin</strong>  - margin around notes</li>
+  <li><strong>messageMargin</strong>  - Space between messages</li>
+  <li><strong>mirrorActors</strong>  - mirror actors under diagram</li>
+  <li><strong>bottomMarginAdj</strong>  - Depending on css styling this might need adjustment</li>
+  <li><strong>Prolongs</strong>  the edge of the diagram downwards</li>
+  <li><strong>useMaxWidth</strong> - when this flag is set the height and width is set to 100% and is then scaling with the available space if not the absolute space required is used</li>
+</ul>
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart sequenceDiagram=(hash useMaxWidth=true)&#125;&#125;
+  &#123;&#123;!sequenceDiagram&#125;&#125;
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}
+
+<hr>
+<h2 class="subtitle is-4">Flow Chart</h2>
+
+<ul>
+  <li>
+    <strong>htmlLabels</strong> - Flag for setting whether or not a html tag should be used for rendering labels on the edges
+  </li>
+  <li>
+    <strong>useMaxWidth</strong> - Flag for setting whether or not a all available width should be used for the diagram.
+  </li>
+</ul>
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart flowChart=(hash htmlLabels=true)&#125;&#125;
+  &#123;&#123;!flowChart&#125;&#125;
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}

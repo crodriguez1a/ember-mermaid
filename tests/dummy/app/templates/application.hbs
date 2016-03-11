@@ -1,3 +1,27 @@
-<h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<main>
+  <div class="container">
+    <h1 class="title">Ember Mermaid</h1>
+    <div class="columns">
+      <div class="column is-quarter">
+        <nav class="menu">
+          {{#each menu as | block |}}
+            {{#link-to block.route class="menu-block"}}
+              <span class="menu-icon">
+                {{#if (eq currentPath block.route)}}<i class="fa fa-angle-right"></i>{{/if}}
+              </span>
+              {{block.name}}
+            {{/link-to}}
+          {{/each}}
+          <a href="https://github.com/crodriguez1a/ember-mermaid" target="_blank" class="menu-block">
+            <i class="fa fa-github"></i>
+            Source
+          </a>
+        </nav>
+      </div>
+      <div class="column content">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</main>

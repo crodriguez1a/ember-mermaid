@@ -1,0 +1,420 @@
+//Colors
+
+//flowchart
+$flowchart-text: #3C474B;
+$flowchart-node: #7CD3CF;
+$flowchart-node-outline: rgba(0,0,0,0);
+
+//Misc
+$tooltip-yellow: #E8EAA1;
+$yellow: $tooltip-yellow;
+$red: #ED6A5A;
+$red-outline: #A84C3F;
+
+
+//Black, white, and grey
+$grey-nurse: #e8e8e8;
+$half-half: #EAEADE;
+$black: #3C474B;
+$gray: grey;
+$white: white;
+$quill-grey: lightgrey;
+
+//Gantt
+$gantt-transparent-bg: rgba(0, 0, 0, 0.5);
+$gantt-line-today: $red;
+$gantt-bar: #4F7CAC;
+$gantt-outline: rgba(0, 0, 0, 0);
+
+//Other shapes
+$node: $flowchart-node;
+
+//fonts
+$font_0: sans-serif;
+$font_1: arial;
+$font_2: consolas;
+
+//urls
+$url_0: url(#arrowhead);
+
+//@extend-elements
+//original selectors
+//.node rect, .node circle, .node ellipse, .node polygon
+%extend_1 {
+	fill: $flowchart-node;
+	stroke: $flowchart-node-outline;
+	stroke-width: 1px;
+}
+
+//original selectors
+//.done0, .done1, .done2, .done3
+%extend_2 {
+	stroke: $gray;
+	fill: $quill-grey;
+	stroke-width: 2;
+}
+
+//original selectors
+//.crit0, .crit1, .crit2, .crit3
+%extend_3 {
+	stroke: $red-outline;
+	fill: $red;
+	stroke-width: 2;
+}
+
+//original selectors
+//.activeCrit0, .activeCrit1, .activeCrit2, .activeCrit3
+%extend_4 {
+	stroke: $red-outline;
+	fill: $node;
+	stroke-width: 2;
+}
+
+//original selectors
+//.doneCrit0, .doneCrit1, .doneCrit2, .doneCrit3
+%extend_5 {
+	stroke: $red-outline;
+	fill: $quill-grey;
+	stroke-width: 2;
+	cursor: pointer;
+	shape-rendering: crispEdges;
+}
+
+.custom-mermaid {
+	.node {
+		rect {
+			@extend %extend_1;
+		}
+		circle {
+			@extend %extend_1;
+		}
+		ellipse {
+			@extend %extend_1;
+		}
+		polygon {
+			@extend %extend_1;
+		}
+		text {
+			font-family: $font_0, $font_1, $font_2;
+			font-size: 14px;
+		}
+	}
+	.edgeLabel {
+		background-color: $grey-nurse;
+	}
+	.cluster {
+		rect {
+			fill: $half-half !important;
+			rx: 4 !important;
+			stroke: $tooltip-yellow !important;
+			stroke-width: 1px !important;
+		}
+		text {
+			fill: $flowchart-text;
+		}
+	}
+	.actor {
+		stroke: $flowchart-node-outline;
+		fill: $flowchart-node;
+	}
+	.actor-line {
+		stroke: $gray;
+	}
+	.messageLine0 {
+		stroke-width: 1.5;
+		stroke-dasharray: "2 2";
+		marker-end: "$url_0";
+		stroke: $flowchart-text;
+	}
+	.messageLine1 {
+		stroke-width: 1.5;
+		stroke-dasharray: "2 2";
+		stroke: $flowchart-text;
+	}
+	#arrowhead {
+		fill: $flowchart-text;
+	}
+	.messageText {
+		fill: $flowchart-text;
+		stroke: none;
+	}
+	.labelBox {
+		stroke: $flowchart-node-outline;
+		fill: $flowchart-node;
+	}
+	.labelText {
+		fill: $black;
+		stroke: none;
+	}
+	.loopText {
+		fill: $black;
+		stroke: none;
+	}
+	.loopLine {
+		stroke-width: 2;
+		stroke-dasharray: "2 2";
+		marker-end: "$url_0";
+		stroke: $flowchart-node-outline;
+	}
+	.note {
+		stroke: $tooltip-yellow;
+		fill: $tooltip-yellow;
+	}
+	.noteText {
+		fill: $black;
+		stroke: none;
+		font-family: $font_0, $font_1, $font_2;
+		font-size: 14px;
+	}
+	.section {
+		stroke: none;
+		opacity: 0.2;
+	}
+	.section0 {
+		fill: $gantt-transparent-bg;
+	}
+	.section2 {
+		fill: $yellow;
+	}
+	.section1 {
+		fill: $white;
+		opacity: 0.2;
+	}
+	.section3 {
+		fill: $white;
+		opacity: 0.2;
+	}
+	.sectionTitle0 {
+		fill: $flowchart-text;
+	}
+	.sectionTitle1 {
+		fill: $flowchart-text;
+	}
+	.sectionTitle2 {
+		fill: $flowchart-text;
+	}
+	.sectionTitle3 {
+		fill: $flowchart-text;
+	}
+	.sectionTitle {
+		text-anchor: start;
+		font-size: 11px;
+		text-height: 14px;
+	}
+	.grid {
+		.tick {
+			stroke: $quill-grey;
+			opacity: 0.3;
+			shape-rendering: crispEdges;
+		}
+		path {
+			stroke-width: 0;
+		}
+	}
+	.today {
+		fill: none;
+		stroke: $red;
+		stroke-width: 2px;
+	}
+	.task {
+		stroke-width: 2;
+	}
+	.taskText {
+		text-anchor: middle;
+		font-size: 11px;
+	}
+	.taskTextOutsideRight {
+		fill: $black;
+		text-anchor: start;
+		font-size: 11px;
+	}
+	.taskTextOutsideLeft {
+		fill: $black;
+		text-anchor: end;
+		font-size: 11px;
+	}
+	.taskText0 {
+		fill: $white;
+	}
+	.taskText1 {
+		fill: $white;
+	}
+	.taskText2 {
+		fill: $white;
+	}
+	.taskText3 {
+		fill: $white;
+	}
+	.task0 {
+		fill: $gantt-bar;
+		stroke: $gantt-outline;
+	}
+	.task1 {
+		fill: $gantt-bar;
+		stroke: $gantt-outline;
+	}
+	.task2 {
+		fill: $gantt-bar;
+		stroke: $gantt-outline;
+	}
+	.task3 {
+		fill: $gantt-bar;
+		stroke: $gantt-outline;
+	}
+	.taskTextOutside0 {
+		fill: $black;
+	}
+	.taskTextOutside2 {
+		fill: $black;
+	}
+	.taskTextOutside1 {
+		fill: $black;
+	}
+	.taskTextOutside3 {
+		fill: $black;
+	}
+	.active0 {
+		fill: $node;
+		stroke: $gantt-outline;
+	}
+	.active1 {
+		fill: $node;
+		stroke: $gantt-outline;
+	}
+	.active2 {
+		fill: $node;
+		stroke: $gantt-outline;
+	}
+	.active3 {
+		fill: $node;
+		stroke: $gantt-outline;
+	}
+	.activeText0 {
+		fill: $black !important;
+	}
+	.activeText1 {
+		fill: $black !important;
+	}
+	.activeText2 {
+		fill: $black !important;
+	}
+	.activeText3 {
+		fill: $black !important;
+	}
+	.done0 {
+		@extend %extend_2;
+	}
+	.done1 {
+		@extend %extend_2;
+	}
+	.done2 {
+		@extend %extend_2;
+	}
+	.done3 {
+		@extend %extend_2;
+	}
+	.doneText0 {
+		fill: $black !important;
+	}
+	.doneText1 {
+		fill: $black !important;
+	}
+	.doneText2 {
+		fill: $black !important;
+	}
+	.doneText3 {
+		fill: $black !important;
+	}
+	.crit0 {
+		@extend %extend_3;
+	}
+	.crit1 {
+		@extend %extend_3;
+	}
+	.crit2 {
+		@extend %extend_3;
+	}
+	.crit3 {
+		@extend %extend_3;
+	}
+	.activeCrit0 {
+		@extend %extend_4;
+	}
+	.activeCrit1 {
+		@extend %extend_4;
+	}
+	.activeCrit2 {
+		@extend %extend_4;
+	}
+	.activeCrit3 {
+		@extend %extend_4;
+	}
+	.doneCrit0 {
+		@extend %extend_5;
+	}
+	.doneCrit1 {
+		@extend %extend_5;
+	}
+	.doneCrit2 {
+		@extend %extend_5;
+	}
+	.doneCrit3 {
+		@extend %extend_5;
+	}
+	.doneCritText0 {
+		fill: $black !important;
+	}
+	.doneCritText1 {
+		fill: $black !important;
+	}
+	.doneCritText2 {
+		fill: $black !important;
+	}
+	.doneCritText3 {
+		fill: $black !important;
+	}
+	.activeCritText0 {
+		fill: $black !important;
+	}
+	.activeCritText1 {
+		fill: $black !important;
+	}
+	.activeCritText2 {
+		fill: $black !important;
+	}
+	.activeCritText3 {
+		fill: $black !important;
+	}
+	.titleText {
+		text-anchor: middle;
+		font-size: 18px;
+		fill: $black;
+	}
+	.mermaid .label {
+		color: $flowchart-text;
+	}
+	.edgePath .path {
+		stroke: $flowchart-text;
+	}
+	text.actor {
+		fill: $black;
+		stroke: none;
+	}
+	#crosshead path {
+		fill: $flowchart-text !important;
+		stroke: $flowchart-text !important;
+	}
+	div.mermaidTooltip {
+		position: absolute;
+		text-align: center;
+		max-width: 200px;
+		padding: 2px;
+		font-family: $font_0, $font_1, $font_2;
+		font-size: 12px;
+		background: $half-half;
+		border: 1px solid $tooltip-yellow;
+		border-radius: 2px;
+		pointer-events: none;
+		z-index: 100;
+	}
+}

@@ -1,0 +1,28 @@
+<h2 class="subtitle is-3">Usage</h2>
+<hr>
+
+<h2 class="subtitle is-5">Installation</h2>
+
+{{#themed-syntax lang="bash" theme="dark" transparent="true"}}
+ember install ember-mermaid
+{{/themed-syntax}}
+
+<hr>
+<h2 class="subtitle is-5">Simple Graph Example</h2>
+{{#mermaid-chart flowChart=(hash useMaxWidth=true htmlLabels=true)}}
+  graph LR
+        A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+{{/mermaid-chart}}
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart&#125;&#125;
+  graph LR
+        A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}

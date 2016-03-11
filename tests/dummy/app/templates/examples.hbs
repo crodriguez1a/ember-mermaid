@@ -1,0 +1,68 @@
+<h2 class="subtitle is-3">Examples</h2>
+<hr>
+<h2 class="subtitle is-4">Gantt</h2>
+
+{{#mermaid-chart gantt=(hash barHeight=30)}}
+  gantt
+      title Release 15.5
+
+      section Dev
+      Development      :a1, 2016-01-01, 30d
+      Peer Review      :a1, 2016-01-31, 5d
+      section Testing
+      Unit Testing     :after a1  , 20d
+      Device Testing   :2016-02-15  , 12d
+      E2E              : 24d
+{{/mermaid-chart}}
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart gantt=(hash barHeight=30)&#125;&#125;
+  gantt
+      title Release 15.5
+
+      section Dev
+      Development      :a1, 2016-01-01, 30d
+      Peer Review      :a1, 2016-01-31, 5d
+      section Testing
+      Unit Testing     :after a1  , 20d
+      Device Testing   :2016-02-15  , 12d
+      E2E              : 24d
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}
+
+<h2 class="subtitle is-4">Sequence Diagram</h2>
+
+{{#mermaid-chart}}
+  sequenceDiagram
+      Alice->John: Hello John, how are you?
+      John-->Alice: Great!
+{{/mermaid-chart}}
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart&#125;&#125;
+  sequenceDiagram
+      Alice->John: Hello John, how are you?
+      John-->Alice: Great!
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}
+
+
+<h2 class="subtitle is-4">Flow Chart</h2>
+
+{{#mermaid-chart flowChart=(hash useMaxWidth=true htmlLabels=true)}}
+  graph LR
+        A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+{{/mermaid-chart}}
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;#mermaid-chart flowChart=(hash useMaxWidth=true htmlLabels=true)&#125;&#125;
+  graph LR
+        A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}

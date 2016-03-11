@@ -1,0 +1,22 @@
+main {
+  padding: 1em;
+}
+
+pre.hljs {
+  background: $blue;
+}
+
+.mermaid {
+  border: 1px solid $grey;
+  padding: 0.5em;
+  text-align: center;
+}
+
+a {
+  color: $red;
+}
+
+.fa {
+  display: inline-block;
+  vertical-align: middle;
+}

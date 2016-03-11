@@ -1,0 +1,48 @@
+<h2 class="subtitle is-3">Theming</h2>
+<hr>
+
+{{#themed-syntax lang="handlebars" theme="dark" transparent="true"}}
+&#123;&#123;!Template&#125;&#125;
+&#123;&#123;#mermaid-chart theme="my-custom-mermaid-theme"&#125;&#125;
+  &#123;&#123;!...&#125;&#125;
+&#123;&#123;/mermaid-chart&#125;&#125;
+{{/themed-syntax}}
+
+{{#themed-syntax lang="scss" theme="dark" transparent="true"}}
+//SCSS
+.my-custom-mermaid-theme {
+  //All the mermaid styles
+{{/themed-syntax}}
+<br>
+<p>
+  <a href="#" download><span class="fa fa-download fa-small"></span> Download a custom theme example</a> as seen below. The <a href="https://github.com/knsv/mermaid/blob/16906ee242fcaf51d77f082fc3e7167241432ab0/dist/mermaid.css" target="_blank">mermaid default theme</a> is included with this addon.
+</p>
+
+{{#mermaid-chart theme="custom-mermaid"}}
+  graph LR
+        A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+{{/mermaid-chart}}
+
+<hr>
+{{#mermaid-chart theme="custom-mermaid" gantt=(hash barHeight=30)}}
+  gantt
+      title Release 15.5
+
+      section Dev
+      Development      :a1, 2016-01-01, 30d
+      Peer Review      :a1, 2016-01-31, 5d
+      section Testing
+      Unit Testing     :after a1  , 20d
+      Device Testing   :2016-02-15  , 12d
+      E2E              : 24d
+{{/mermaid-chart}}
+
+<hr>
+{{#mermaid-chart theme="custom-mermaid"}}
+  sequenceDiagram
+      Alice->John: Hello John, how are you?
+      John-->Alice: Great!
+{{/mermaid-chart}}

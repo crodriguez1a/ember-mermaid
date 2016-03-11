@@ -1,0 +1,1 @@
+export { default } from 'ember-mermaid/components/mermaid-chart';
