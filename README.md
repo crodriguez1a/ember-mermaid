@@ -26,9 +26,3 @@ An ember addon for Mermaid by [https://github.com/knsv](knsv)
 	{{/mermaid-chart}}
 	
 
-##Configuration
-
-<http://demos.evolutionaryapps.com/EmberMermaid/configuration>
-
-##Theming
-<http://demos.evolutionaryapps.com/EmberMermaid/theming>
