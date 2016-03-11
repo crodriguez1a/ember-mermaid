@@ -16,6 +16,10 @@ a {
   color: $red;
 }
 
+.active, .active:hover {
+  color: rgba(0, 0, 0, 0.5)
+}
+
 .fa {
   display: inline-block;
   vertical-align: middle;
