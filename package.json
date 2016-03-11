@@ -1,6 +1,6 @@
 {
   "name": "ember-mermaid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An ember addon for Mermaid by knsv",
   "directories": {
     "doc": "doc",
@@ -54,6 +54,7 @@
     "ember-cli-htmlbars": "^1.0.1"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "http://demos.evolutionaryapps.com/EmberMermaid/"
   }
 }
