@@ -1,26 +1,34 @@
 # Ember-mermaid
 
-An ember addon for Mermaid by knsv
+An ember addon for Mermaid by [https://github.com/knsv](knsv)
+
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+     
+     ember install ember-mermaid
+     
+     
+##Documentation
 
-## Running
+- Addon: <http://demos.evolutionaryapps.com/EmberMermaid>
+- Source: <http://knsv.github.io/mermaid/>
 
-* `ember server`
-* Visit your app at http://localhost:4200.
 
-## Running Tests
+##Example
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+	{{#mermaid-chart}}
+      graph LR
+        A[Hard edge] -->|Link text| B(Round edge)
+          B --> C{Decision}
+          C -->|One| D[Result one]
+          C -->|Two| E[Result two]
+	{{/mermaid-chart}}
+	
 
-## Building
+##Configuration
 
-* `ember build`
+<http://demos.evolutionaryapps.com/EmberMermaid/configuration>
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+##Theming
+<http://demos.evolutionaryapps.com/EmberMermaid/configuration>

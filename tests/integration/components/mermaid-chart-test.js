@@ -16,9 +16,15 @@ test('it renders', function(assert) {
   // Template block usage:
   this.render(hbs`
     {{#mermaid-chart}}
-      template block text
+      sequenceDiagram
+        Alice->John: Hello John, how are you?
+        John-->Alice: Great!
     {{/mermaid-chart}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'AliceJohnHello John, how are you?Great!AliceJohn', 'Graph data was passed');
+});
+
+test('it needs tests', function(assert) {
+  assert.ok(false, 'Write some tests man.');
 });
