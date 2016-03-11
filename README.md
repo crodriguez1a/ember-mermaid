@@ -31,4 +31,4 @@ An ember addon for Mermaid by [https://github.com/knsv](knsv)
 <http://demos.evolutionaryapps.com/EmberMermaid/configuration>
 
 ##Theming
-<http://demos.evolutionaryapps.com/EmberMermaid/configuration>
+<http://demos.evolutionaryapps.com/EmberMermaid/theming>
