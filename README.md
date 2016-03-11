@@ -1,6 +1,6 @@
 # Ember-mermaid
 
-This README outlines the details of collaborating on this Ember addon.
+An ember addon for Mermaid by knsv
 
 ## Installation
 
