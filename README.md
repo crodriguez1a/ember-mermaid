@@ -11,8 +11,8 @@ An ember addon for Mermaid by [https://github.com/knsv](knsv)
      
 ##Documentation
 
-- Addon: <http://demos.evolutionaryapps.com/EmberMermaid>
-- Source: <http://knsv.github.io/mermaid/>
+- Ember Mermaid: <http://demos.evolutionaryapps.com/EmberMermaid>
+- Mermaid: <http://knsv.github.io/mermaid/>
 
 
 ##Example
